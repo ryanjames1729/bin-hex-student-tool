@@ -54,10 +54,10 @@ const Navbar = ({ landingPages }) => {
 
         <ul className="DESKTOP-MENU hidden uppercase space-x-8 lg:flex">
           <li>
-            <Link href="#">BINARY</Link>
+            <Link href="#binary">BINARY</Link>
           </li>
           <li>
-            <Link href="#">HEXADECIMAL</Link>
+            <Link href="#hexadecimal">HEXADECIMAL</Link>
           </li>
           <li>
             <Link href="#footer">Contact</Link>

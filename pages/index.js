@@ -6,7 +6,11 @@ import { useState } from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 
+
+
 export default function Home() {
+
+  
 
   const [binZeroIsOn, setZeroIsOn] = useState(false);
   const [binOneIsOn, setOneIsOn] = useState(false);
@@ -29,6 +33,8 @@ export default function Home() {
   const [hexZero, setHexZero] = useState('0');
   const [hexOne, setHexOne] = useState('0');
   const [hexTwo, setHexTwo] = useState('0');
+
+
 
   const returnHexValues = () => {
     
@@ -87,6 +93,9 @@ export default function Home() {
     return sum;
   }
 
+  
+  
+
 
   return (
     <div className="bg-white dark:bg-slate-900 dark:text-white dark:shadow-white">
@@ -104,7 +113,7 @@ export default function Home() {
 
         </div>
         {/* Binary Tool */}
-        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white">
+        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white" id="#binary">
           <div className="w-screen flex flex-row item-center justify-center">
             <div className={binSevenIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>128</div>
             <div className={binSixIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>64</div>
@@ -238,7 +247,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row item-center justify-center text:lg lg:text-4xl">
-            <div className="w-1/3 py-4">
+            <div className="w-1/3 p-4 item-center justify-center">
               Your Result: {(binSevenIsOn ? 128 : 0) + (binSixIsOn ? 64 : 0) + (binFiveIsOn ? 32 : 0) + (binFourIsOn ? 16 : 0) + (binThreeIsOn ? 8 : 0) + (binTwoIsOn ? 4 : 0) + (binOneIsOn ? 2 : 0) + (binZeroIsOn ? 1 : 0)}
             </div>
           </div>
@@ -247,14 +256,10 @@ export default function Home() {
         </div>
 
         {/* Binary Wuiz */}
-        <div className="h-screen shadow-md dark:shadow-white">
-              <h1>Convert to binary:</h1>
-              <textarea></textarea>
-              <button>Submit</button>
-        </div>
+       
 
         {/* Heaxadecimal Tool */}
-        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white">
+        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white" id="hexadecimal">
           <div className="w-screen flex flex-row item-center justify-center lg:px-96">
             <div className={hexTwo != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>256</div>
             <div className={hexOne != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16</div>
@@ -287,9 +292,12 @@ export default function Home() {
               ></textarea>
           </div>
           
-          <div className="flex flex-row item-center justify-center text:lg lg:text-4xl">
-            <div className="w-1/3 py-4">
-              Your Result: {returnHexValues()}
+          <div className="flex flex-col item-center justify-center text:lg lg:text-4xl">
+            <div className="py-4 flex flex-row item-center justify-center lg:text-4xl">
+              <div>{hexTwo} x 16<sup>2</sup> + {hexOne} x 16<sup>1</sup> + {hexZero} x 1<sup>0</sup></div>
+            </div>
+            <div className="py-4 flex flex-row item-center justify-center lg:text-4xl">
+              <div>Your Result: {returnHexValues()}</div>
             </div>
           </div>
      
@@ -299,9 +307,7 @@ export default function Home() {
         </div>
 
         {/* Hexadecimal Quiz */}
-        <div className="h-screen shadow-md">
-
-        </div>
+        
         
       </main>
 
