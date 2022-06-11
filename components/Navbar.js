@@ -3,8 +3,6 @@ import { useState } from "react";
 import Link from 'next/link';
 import Script from 'next/script'
 
-import { GraphQLClient } from 'graphql-request'
-
 
 const Navbar = ({ landingPages }) => {
   
