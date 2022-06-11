@@ -26,6 +26,68 @@ export default function Home() {
   const binSixSwitch = () => setSixIsOn(!binSixIsOn);
   const binSevenSwitch = () => setSevenIsOn(!binSevenIsOn);
 
+  const [hexZero, setHexZero] = useState('0');
+  const [hexOne, setHexOne] = useState('0');
+  const [hexTwo, setHexTwo] = useState('0');
+
+  const returnHexValues = () => {
+    
+    let sum = 0;
+    switch(hexZero){
+      case 'A': sum += 10;
+      break;
+      case 'B': sum += 11;
+      break;
+      case 'C': sum += 12;
+      break;
+      case 'D': sum += 13;
+      break;
+      case 'E': sum += 14;
+      break;
+      case 'F': sum += 15;
+      break;
+    }
+    if(hexZero*1 < 10){
+      sum += hexZero*1;
+    }
+    switch(hexOne){
+      case 'A': sum += 10*16;
+      break;
+      case 'B': sum += 11*16;
+      break;
+      case 'C': sum += 12*16;
+      break;
+      case 'D': sum += 13*16;
+      break;
+      case 'E': sum += 14*16;
+      break;
+      case 'F': sum += 15*16;
+      break;
+    }
+    if(hexOne*1 < 10){
+      sum += hexOne*1*16;
+    }
+    switch(hexTwo){
+      case 'A': sum += 10*16*16;
+      break;
+      case 'B': sum += 11*16*16;
+      break;
+      case 'C': sum += 12*16*16;
+      break;
+      case 'D': sum += 13*16*16;
+      break;
+      case 'E': sum += 14*16*16;
+      break;
+      case 'F': sum += 15*16*16;
+      break;
+    }
+    if(hexTwo*1 < 10){
+      sum += hexTwo*1*16*16;
+    }
+    return sum;
+  }
+
+
   return (
     <div className="bg-white dark:bg-slate-900 dark:text-white dark:shadow-white">
       <Head>
@@ -42,7 +104,7 @@ export default function Home() {
 
         </div>
         {/* Binary Tool */}
-        <div className="h-screen shadow-md text-xl lg:text-4xl">
+        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white">
           <div className="w-screen flex flex-row item-center justify-center">
             <div className={binSevenIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>128</div>
             <div className={binSixIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>64</div>
@@ -185,14 +247,54 @@ export default function Home() {
         </div>
 
         {/* Binary Wuiz */}
-        <div className="h-screen shadow-md">
+        <div className="h-screen shadow-md dark:shadow-white">
               <h1>Convert to binary:</h1>
               <textarea></textarea>
               <button>Submit</button>
         </div>
 
         {/* Heaxadecimal Tool */}
-        <div className="h-screen shadow-md">
+        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white">
+          <div className="w-screen flex flex-row item-center justify-center lg:px-96">
+            <div className={hexTwo != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>256</div>
+            <div className={hexOne != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16</div>
+            <div className={hexZero != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>1</div>
+          </div>
+
+          <div className="w-screen flex flex-row item-center justify-center lg:px-96">
+            <div className={hexTwo != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16<sup>2</sup></div>
+            <div className={hexOne != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16<sup>1</sup></div>
+            <div className={hexZero != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>1<sup>0</sup></div>
+          </div>
+
+          <div className="w-screen flex flex-row item-center justify-center lg:px-96">
+            <textarea 
+              className="flex-auto py-6 lg:p-6 text-center border-2 lg:w-0.5 dark:bg-black dark:text-white"
+              value={hexTwo}
+              onChange={(e) => setHexTwo(e.target.value)}
+              ></textarea>
+            <textarea 
+              className="flex-auto py-6 lg:p-6 text-center border-2 lg:w-0.5 dark:bg-black dark:text-white"
+              value={hexOne}
+              onChange={(e) => setHexOne(e.target.value)}
+              ></textarea>
+            <textarea 
+              className="flex-auto py-6 lg:p-6 text-center border-2 lg:w-0.5 dark:bg-black dark:text-white"
+              value={hexZero}
+              onChange={(e) => {
+                setHexZero(e.target.value);
+              }}
+              ></textarea>
+          </div>
+          
+          <div className="flex flex-row item-center justify-center text:lg lg:text-4xl">
+            <div className="w-1/3 py-4">
+              Your Result: {returnHexValues()}
+            </div>
+          </div>
+     
+
+          
 
         </div>
 
