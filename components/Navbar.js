@@ -57,9 +57,6 @@ const Navbar = ({ landingPages }) => {
           <li>
             <Link href="#hexadecimal">HEXADECIMAL</Link>
           </li>
-          <li>
-            <Link href="#footer">Contact</Link>
-          </li>
         </ul>
       </nav>
     </div>
