@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -247,16 +248,22 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row item-center justify-center text:lg lg:text-4xl">
-            <div className="w-1/3 p-4 item-center justify-center">
+            <div className="w-1/3 p-4 item-center justify-center flex">
               Your Result: {(binSevenIsOn ? 128 : 0) + (binSixIsOn ? 64 : 0) + (binFiveIsOn ? 32 : 0) + (binFourIsOn ? 16 : 0) + (binThreeIsOn ? 8 : 0) + (binTwoIsOn ? 4 : 0) + (binOneIsOn ? 2 : 0) + (binZeroIsOn ? 1 : 0)}
             </div>
           </div>
             
+          {/* Binary Wuiz */}
+        <div className="flex flex-col justify-center items-center pt-8">
+          <div className="w-[35%] py-3 bg-indigo-600 rounded-lg justify-center flex text-2xl hover:bg-indigo-800">
+          <Link href="/quiz-bin"><a>Ready for a binary number quiz?</a></Link>
+          </div>
+          
+        </div>
 
         </div>
 
-        {/* Binary Wuiz */}
-       
+        
 
         {/* Heaxadecimal Tool */}
         <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white" id="hexadecimal">
