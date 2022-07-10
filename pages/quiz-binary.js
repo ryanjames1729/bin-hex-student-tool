@@ -113,9 +113,25 @@ export default function QuizPage() {
       <div className="flex flex-col items-center justify-center w-screen px-5 h-screen bg-[#1A1A1A]">
         
         {showScore ? (
+          <>
           <h1 className="text-3xl font-semibold text-center text-white">
             You scored {score} out of 5
           </h1>
+
+          <div className="flex w-full mt-4 px-2 text-white flex justify-center justify-between">
+          <div className="w-[49%] py-3 px-2 bg-indigo-600 rounded-lg flex justify-center"
+            ><Link href="/"><a>Go Back</a></Link>
+          </div>
+          <button 
+            onClick={() => {
+              let curreentLocation = window.location.pathname;
+              window.location.href = curreentLocation;
+            }} 
+            className="w-[49%] py-3 px-2 bg-indigo-600 rounded-lg flex justify-center"
+            >Start Over
+          </button>
+          </div>
+          </>
           ) : !loading ? (
             <p className="text-white">Loading ...</p>
           ) :

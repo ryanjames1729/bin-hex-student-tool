@@ -253,8 +253,8 @@ export default function Home() {
             
           {/* Binary Wuiz */}
         <div className="flex flex-col justify-center items-center pt-8">
-          <div className="w-[35%] py-3 bg-indigo-600 rounded-lg justify-center flex text-2xl hover:bg-indigo-800">
-          <Link href="/quiz-bin"><a>Ready for a binary number quiz?</a></Link>
+          <div className="w-full lg:w-[35%] py-3 bg-indigo-600 rounded-lg justify-center flex lg:text-2xl hover:bg-indigo-800 hover:underline">
+          <Link href="/quiz-binary"><a>Ready for a binary number quiz?</a></Link>
           </div>
           
         </div>
@@ -264,7 +264,7 @@ export default function Home() {
         
 
         {/* Heaxadecimal Tool */}
-        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white" id="hexadecimal">
+        <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white pt-6" id="hexadecimal">
           <div className="w-screen flex flex-row item-center justify-center lg:px-96">
             <div className={hexTwo != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>256</div>
             <div className={hexOne != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16</div>

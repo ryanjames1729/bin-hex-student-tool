@@ -42,9 +42,6 @@ const Navbar = ({ landingPages }) => {
                     <li className="border-b border-gray-400 my-2 uppercase">
                         <Link href="#">HEXADECIMAL</Link>
                      </li>
-                    <li className="border-b border-gray-400 my-2 uppercase">
-                        <Link href="#footer">Contact</Link>
-                    </li>
                 </ul>
             </div>
           </div>
