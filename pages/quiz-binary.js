@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
+import Footer from '../components/Footer'
+
 import questions from '../questions.json'
 
 export default function QuizPage() {
@@ -184,9 +186,7 @@ export default function QuizPage() {
 
       
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <Link href="https://github.com/ryanjames1729"><a>Made by Ryan James</a></Link>
-      </footer>
+      <Footer />
     </div>
   )
 }

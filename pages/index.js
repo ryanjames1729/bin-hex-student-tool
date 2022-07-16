@@ -306,12 +306,18 @@ export default function Home() {
             </div>
           </div>
      
-
+          {/* Hexadecimal Wuiz */}
+          <div className="flex flex-col justify-center items-center pt-8">
+          <div className="w-full lg:w-[35%] py-3 bg-indigo-600 rounded-lg justify-center flex lg:text-2xl hover:bg-indigo-800 hover:underline">
+          <Link href="/quiz-hexadecimal"><a>Ready for a hexadecimal number quiz?</a></Link>
+          </div>
+          
+        </div>
           
 
         </div>
 
-        {/* Hexadecimal Quiz */}
+          
         
         
       </main>
