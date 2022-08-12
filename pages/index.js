@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         {/* Binary Tool */}
         <div className="h-screen shadow-md text-xl lg:text-4xl dark:shadow-white" id="#binary">
-          <div className="w-screen flex flex-row item-center justify-center">
+          <div className="flex flex-row item-center justify-center">
             <div className={binSevenIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>128</div>
             <div className={binSixIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>64</div>
             <div className={binFiveIsOn ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>32</div>
