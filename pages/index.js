@@ -299,7 +299,7 @@ export default function Home() {
           
           <div className="flex flex-col item-center justify-center text:lg lg:text-4xl">
             <div className="py-4 flex flex-row item-center justify-center lg:text-4xl">
-              <div>{hexTwo} x 16<sup>2</sup> + {hexOne} x 16<sup>1</sup> + {hexZero} x 1<sup>0</sup></div>
+              <div>{hexTwo} x 16<sup>2</sup> + {hexOne} x 16<sup>1</sup> + {hexZero} x 16<sup>0</sup></div>
             </div>
             <div className="py-4 flex flex-row item-center justify-center lg:text-4xl">
               <div>Your Result: {returnHexValues()}</div>
