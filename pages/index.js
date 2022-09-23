@@ -274,7 +274,7 @@ export default function Home() {
           <div className="w-screen flex flex-row item-center justify-center lg:px-96">
             <div className={hexTwo != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16<sup>2</sup></div>
             <div className={hexOne != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16<sup>1</sup></div>
-            <div className={hexZero != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>1<sup>0</sup></div>
+            <div className={hexZero != '0' ? "flex-auto py-6 lg:p-6 text-center border-2 w-0.5" : "flex-auto py-6 lg:p-6 text-center border-2 w-0.5 dark:text-slate-800 text-slate-100"}>16<sup>0</sup></div>
           </div>
 
           <div className="w-screen flex flex-row item-center justify-center lg:px-96">
